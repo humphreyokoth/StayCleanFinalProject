@@ -1,0 +1,122 @@
+/* LOGIN PAGE CSS */
+/* Form body styling CSS */
+.login-form {
+  margin: 0;
+  padding: 10px 10px 10px 10px;
+  font-family: sans-serif;
+}
+/* Form styling */
+.sign-up-form {
+  width: 350px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  background: rgb(20, 20, 20);
+  padding: 20px;
+  margin: 4% auto;
+  text-align: center;
+}
+
+/* Sign up word CSS */
+.sign-up-form h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Inputs CSS login page */
+.input-box {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #999;
+  outline: none;
+}
+/* Button CSS for all buttons in the login page. */
+button {
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* Sign up button CSS */
+.signup-btn {
+  background-color: #1c8adb;
+}
+/* Login button CSS */
+.login-btn {
+  background-color: #21afde;
+}
+/* Anchor styling. */
+a {
+  text-decoration: none;
+}
+/* Horizontal rule. */
+hr {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/*  Or CSS. */
+.or {
+  background: #fff;
+  width: 30px;
+  margin: -27px auto 2px;
+
+  /* Image CSS. */
+}
+img {
+  width: 70px;
+  margin-top: -50px;
+}
+/* EmployeeList CSS */
+.table {
+  color: rgb(10, 10, 10);
+  width: 50%;
+  margin: 0;
+}
+.thead-dark {
+  background-color: #080808;
+}
+
+/* EMPLOYEE REGISTRATION CSS */
+
+/* .container {
+} */
+body {
+  background-image: url(/images/bgimg.jpg);
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+  color: #0a0a0a;
+}
+#form {
+  background-color: #9efae2;
+  padding-top: 10px;
+  margin-top: 30px;
+  opacity: 90%;
+  width: 40%;
+  border-radius: 10px;
+}
+.btn-info {
+  background: #1c8adb;
+  height: 40px;
+  font-size: 18px;
+  width: 83%;
+}
+
+label {
+  color: #131212;
+}
+input:focus,
+input:hover {
+  border-color: none;
+  outline: none;
+  box-shadow: none;
+}
