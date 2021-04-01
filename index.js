@@ -1,5 +1,6 @@
 // Dependencies
 const express = require('express');
+const homeRoutes = require('./router/homeRoutes');
 const employeeRoutes = require('./router/employeeRoutes');
 const loginRoutes = require('./router/loginRoutes');
 const registerRoutes = require('./router/registerRoutes');
@@ -54,9 +55,24 @@ app.use(express.static('public'));
 app.use('/public/images', express.static(__dirname + '/public/images'));
 
 // Routes
+app.use('/', homeRoutes);
 app.use('/employee', employeeRoutes);
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
+
+
+// logout
+app.post('/logout', (req, res) => {
+  if (req.session) {
+    req.session.destroy((err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        return res.redirect('/login');
+      }
+    });
+  }
+});
 
 // cater for undefined routes
 app.get('*', (req, res) => {

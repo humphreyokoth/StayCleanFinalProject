@@ -20,10 +20,13 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 // save data from the createEmployee pug file
-router.post('/createEmployee',upload.single('imageupload'),async (req, res) => {
+router.post(
+  '/createEmployee',
+  upload.single('imageupload'),
+  async (req, res) => {
     try {
       const employee = new Employee(req.body);
-      employee.imageupload = req.file.path;
+      // employee.imageupload = req.file.path;
       await employee.save();
       res.redirect('/employee/list');
     } catch (err) {
@@ -48,10 +51,7 @@ router.get('/list', async (req, res) => {
 });
 
 // update record based on the _id from the database
-// after adding the update button on the  employeelist
-// renders the updateEmployee pug file where you can update
-// add the `app.use('/public/images', express.static(__dirname + '/public/images'));`
-// to index.js to make sure image is showing
+
 router.get('/update/:id', async (req, res) => {
   try {
     const updateEmp = await Employee.findOne({ _id: req.params.id });
@@ -65,7 +65,7 @@ router.get('/update/:id', async (req, res) => {
 router.post('/update', async (req, res) => {
   try {
     await Employee.findOneAndUpdate({ _id: req.query.id }, req.body);
-    res.redirect('/employee');
+    res.redirect('/employee/list');
   } catch (err) {
     console.log(err);
     res.status(404).send('Unable to update item in the database');

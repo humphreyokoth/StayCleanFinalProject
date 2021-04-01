@@ -14,13 +14,13 @@ const employeeSchema = new mongoose.Schema({
     unique: true,
   },
   gender: String,
-  pastincidence: [
-    {
-      type: String,
-    },
-  ],
-  imageupload: String,
-  role: String,
+  // pastincidence: [
+  //   {
+  //     type: String,
+  //   },
+  // ],
+  // imageupload: String,
+  // role: String,
 });
 
 //export the mongoose model

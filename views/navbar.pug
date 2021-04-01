@@ -9,21 +9,21 @@ head
 body 
   nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
     .container-fluid
-      a.navbar-brand(href='home') Stay Clean
+      a.navbar-brand(href='/register') Stay Clean
       button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
         span.navbar-toggler-icon
       #navbarSupportedContent.collapse.navbar-collapse
         // Aligning navbar to the right
         ul.navbar-nav.ms-auto.mb-2.mb-lg-0
             li.nav-item
-                a.nav-link.active(aria-current='page' href='home') Home
+                a.nav-link.active(aria-current='page' href='/register') Home
             li.nav-item
-                a.nav-link(href='register') Register Employee
+                a.nav-link(href='/register') Register Employee
             li.nav-item
-                a.nav-link(href='employeeList') Employee List           
+                a.nav-link(href='/employee/list') Registration    
             li.nav-item
-                a.nav-link(href='earnings') Earnings
+                a.nav-link(href='/earnings') Earnings
             li.nav-item
-                a.nav-link(href='orders') Customer            
-        form.d-flex
+                a.nav-link(href='orders') Orders            
+        form.d-flex(action='/login')
             button.btn.btn-outline-success(type='submit') Login

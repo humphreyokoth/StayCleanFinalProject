@@ -13,28 +13,18 @@ block content
             div.col.form-group
                 label NIN
                 input.form-control(name="nin")
-        div.form-row
+        div.form-row                                   
             div.col.form-group
-                label Gender
-                div 
-                    label.form-check.form-check-inline
-                        input.form-check-input(type="radio" name="gender" value="female")
-                        span.form-check-label Female 
-                    label.form-check.form-check-inline
-                    input.form-check-input(type="radio" name="gender" value="male")
-                    span.form-check-label Male 
+                label Gender 
+                select.form-control(name="gender")
+                    option(value="driver")  Male
+                    option(value="conductor") Female
             div.col.form-group
-                label Past incidences 
-                div
-                    label.form-check.form-check-inline 
-                        span.form-check-label accidents    &nbsp
-                        input.form-check-input(type="checkbox" checked name="pastincidence" value="accidents")
-                    label.form-check.form-check-inline 
-                        span.form-check-label fights   &nbsp
-                        input.form-check-input(type="checkbox" checked name="pastincidence" value="fights")
-                    label.form-check.form-check-inline 
-                        span.form-check-label fuel thefts &nbsp
-                    input.form-check-input(type="checkbox" checked name="pastincidence" value="fuelthefts")
+                label Date of birth 
+                input(type='date' name='date') 
+            div.col.form-group
+                label Date of birth 
+                input(type='date' name='date')          
         div.form-row
             div.col.form-group
                 label Upload image
@@ -49,4 +39,4 @@ block content
                 button.btn.btn-primary.btn-block Register Employee
         div.form-row
             div.pull-right
-                a(class='button' href='/employee') Employee List
+                a(class='button' href='/employee/employeeList') Employee List

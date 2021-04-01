@@ -13,10 +13,11 @@ block content
                 th Full Name 
                 th NIN
                 th Gender
+                th D.O.B
                 th Past incidences
                 th Role
-                th
-                th
+                th Update Employee
+                th Delete Employee
         tbody
             if users.length
             each user in users
@@ -24,8 +25,12 @@ block content
                     td #{user.lastname +' '+ user.firstname}
                     td #{user.nin}
                     td #{user.gender}
+                    td #{user.DOB}
                     td #{user.pastincidence}
                     td #{user.role}
+                    td 
+                    td 
+                    td 
                     td
                         a(href='/employee/update/'+user._id) Update 
                     td
@@ -35,5 +40,8 @@ block content
     div.form-row
         div.pull-right
             a(class='button', href='/') Home Page
-        
+        div.pull-left
+            form(method="post" action='/logout') 
+                button.btn.btn-dark.btn-block(type="submit") Log out
+
                 
