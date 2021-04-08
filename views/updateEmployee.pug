@@ -30,22 +30,22 @@ block content
                             input(value= "male" type="radio" checked = user.gender==="male" name="gender") 
                             label &nbspFemale&nbsp
                             input(value= "female" type="radio" checked = user.gender==="female" name="gender")
-                tr
-                    th Past incidence 
-                    td 
-                        label accidents&nbsp 
-                        input(value= "accidents" type="checkbox" checked =user.pastincidence.includes('accidents') name="pastincidence")
-                        label &nbspfights&nbsp
-                        input(value= "fights" type="checkbox" checked =user.pastincidence.includes('fights') name="pastincidence")
-                        label &nbspfuel thefts&nbsp
-                        input(value= "fuel thefts" type="checkbox" checked =user.pastincidence.includes('fuel thefts') name="pastincidence")
-                tr
-                tr
-                    th Role
-                    td 
-                        select.form-control(name="role")  
-                            option(value="driver" selected = user.role === "driver") Driver
-                            option(value="conductor" selected = user.role === "conductor") Conductor
+                //- tr
+                //-     th Past incidence 
+                //-     td 
+                //-         label accidents&nbsp 
+                //-         input(value= "accidents" type="checkbox" checked =user.pastincidence.includes('accidents') name="pastincidence")
+                //-         label &nbspfights&nbsp
+                //-         input(value= "fights" type="checkbox" checked =user.pastincidence.includes('fights') name="pastincidence")
+                //-         label &nbspfuel thefts&nbsp
+                //-         input(value= "fuel thefts" type="checkbox" checked =user.pastincidence.includes('fuel thefts') name="pastincidence")
+                //- tr
+                //- tr
+                //-     th Role
+                //-     td 
+                //-         select.form-control(name="role")  
+                //-             option(value="driver" selected = user.role === "driver") Driver
+                //-             option(value="conductor" selected = user.role === "conductor") Conductor
                 tr
                     td(colspan=2)
                         button.btn.btn-dark.btn-block(type="submit") Update

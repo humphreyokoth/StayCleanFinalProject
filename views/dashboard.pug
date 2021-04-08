@@ -1,0 +1,82 @@
+extend layout 
+block content
+            input#checkbox(type='checkbox')
+            header.header
+                h2.uname
+                  | STAY CLEAN
+                  label(for='checkbox')
+                    i#navbtn.fa.fa-bars(aria-hidden='true')
+                // User icon
+                i.fa.fa-user(aria-hidden='true')
+            .body
+                nav.sidebar
+                  .user-p
+                    img(src='' alt='')
+                  ul
+                    li
+                      a(href="/")
+                        i.fa.fa-desktop(aria-hidden='true')
+                        span  Dashboard
+                    li
+                      a(href="/register")
+                        i.fa.fa-user(aria-hidden='true')
+                        span  Register Front Desk
+                    li
+                      a(href="/employee")
+                        i.fa.fa-users(aria-hidden='true')
+                        span Register Employees
+                    li
+                      a(href="/employee/list")
+                        i.fa.fa-pencil-square(aria-hidden='true')
+                        span  Update Employee
+                    li
+                      a(href="/order")
+                        i.fa.fa-cog(aria-hidden='true')
+                        span  Orders
+                    li
+                      a(href="/")
+                        i.fa.fa-power-off(aria-hidden='true')
+                        span  Logout
+            form(method="POST"  action='/employee/createEmployee' enctype="multipart/form-data")
+                      div.row.g-3
+                          div.col-md-6
+                              label First name 
+                              input.form-control(name="firstname")
+                          div.col-md-6
+                              label Last name
+                              input.form-control(name="lastname")            
+                      div.row.g-3 
+                          div.col-md-4
+                              label NIN
+                              input.form-control(name="nin")
+                          div.col-md-4
+                              label Username
+                              input.form-control(name="username")                                     
+                          div.col-md-4
+                              label Gender 
+                              select.form-control(name="gender")
+                                  option(value="option")  Select 
+                                  option(value="driver")  Male
+                                  option(value="conductor") Female
+                          div.col-md-4
+                              label Date of Birth 
+                              input(type='date' name='date')  
+                          div.col-md-4
+                              label Role 
+                              select.form-control(name="role")
+                                  option(value="option")  Select 
+                                  option(value="driver")  Driver
+                                  option(value="conductor") Conductor
+                          div.col-md-4
+                              label Past Incidents 
+                              select.form-control(name="pastincidents")
+                                  option(value="option")  Select 
+                                  option(value="accidents")  Accidents  
+                                  option(value="figts")  Fights
+                                  option(value="thefts") Thefts    
+                          div.form-row
+                          div.col.form-group
+                              button.btn.btn-primary.btn-block Register Employee
+                      div.form-row
+                          div.pull-right
+                              a(class='button btn-button' href='/employee/employeeList') Employee List  

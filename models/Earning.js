@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 //create a schema for the data you need to save
-const employeeSchema = new mongoose.Schema({
+const earningSchema = new mongoose.Schema({
   firstname: {
     type: String,
   },
@@ -14,14 +14,14 @@ const employeeSchema = new mongoose.Schema({
     unique: true,
   },
   gender: String,
-  // pastincidence: 
+  // pastincidence:
   //   {
   //     type: String,
   //   },
-  // 
+  //
   // imageupload: String,
   // role: String,
 });
 
 //export the mongoose model
-module.exports = mongoose.model('Employee', employeeSchema);
+module.exports = mongoose.model('Earning', earningSchema);

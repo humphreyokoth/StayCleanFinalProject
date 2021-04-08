@@ -4,6 +4,9 @@ const express = require('express');
 //Exploring route
 const router = express.Router();
 
+const Employee = require('../models/Earning');
+
+
 //Route for home
 router.get('/', (req, res) => {
   res.render('earnings', { title: 'Home' });

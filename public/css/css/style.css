@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-image: url(/public/images/back.jpg);
+  height: 100vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.navbar-brand {
+  font-family: sans-serif;
+}
+.nav-link {
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+.banner-text {
+  font-family: sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.banner-btn a {
+  border: 1px solid #fff;
+  border-radius: 25px;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 10px 50px;
+  display: inline-block;
+  margin: 15px;
+  color: #131212;
+  font-weight: bold;
+}
+
+.banner-btn a.active:hover {
+  background: transparent;
+  border-color: #000;
+  color: #000;
+}
+
+/* Responsive CSS */
+@media (max-width: 600px) {
+  .banner-text p {
+    display: contents;
+  }
+  .navbar-dark {
+    background-color: #333;
+  }
+  .text-area {
+    font-size: 100px;
+  }
+}

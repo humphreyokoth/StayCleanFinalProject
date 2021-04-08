@@ -4,9 +4,13 @@ block content
         h4.card-title Welcome 
     div.form-row
         div.col.form-group
+            form(method="post" action='/logout') 
+                button.btn.btn-dark.btn-block.logout(type="submit") Log out
+        div.col.form-group
             a(href='/employee/createEmployee')  Add New Employee
+            
         div.pull-right
-        a(href='/order')  View Order List
+        a(href='/order')  View Order List        
     table.table
         thead.thead-dark
             tr
@@ -36,12 +40,6 @@ block content
                     td
                         form(method="post" action='/employee/delete')
                             input(type="hidden", placeholder="", name="id", value=user._id)
-                            button.btn.btn-dark.btn-block(type="submit") Delete
-    div.form-row
-        div.pull-right
-            a(class='button', href='/') Home Page
-        div.pull-left
-            form(method="post" action='/logout') 
-                button.btn.btn-dark.btn-block(type="submit") Log out
+                            button.btn.btn-dark.btn-block(type="submit") Delete           
 
                 
