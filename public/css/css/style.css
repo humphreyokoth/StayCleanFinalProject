@@ -64,3 +64,44 @@ header {
     font-size: 100px;
   }
 }
+.login-link{  
+    text-decoration:none;
+    
+    width: 80px;
+    padding: 10px 10px;
+    border: 1px solid #000;
+    background-color:#0d470d ;
+    border-radius: 5px;
+    text-shadow: #000;
+    text-align: left;
+    color: #ffff;
+  
+}
+
+
+/* Orders CSS */
+.orderform {
+  padding: 10px;
+  border: 1px solid #000;
+  width: 500px; 
+  margin: 100px; 
+  place-items: center;
+  border-radius: 10px;
+  
+}
+h4{
+ text-align: center;
+}
+.btn-primary-btn{
+  float: right;
+}
+.btn2{
+ float: right;
+ width: 100%;
+}
+.btn-block{
+  width: 100%;
+  float: right;
+}
+
+

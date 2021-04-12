@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.login-link{  
+    text-decoration: none;
+    width: 80px;
+    padding: 10px 10px;
+    border: 1px solid #000;
+    background-color:#0d470d ;
+    border-radius: 5px;
+    text-shadow: #000;
+    text-align: left;
+    color: #ffff;
+}
+body{
+  background-image: url(/public/images/bgimg.jpg);
+  background-image:no-repeat;
+}
+h4{
+ text-align: center;
+}
+.card {
+  margin: 80px;
+  padding: 10px;
+  border: 1px solid #000;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: #000;
+}
+.btn{
+  width: 100%;
+  margin: auto;
+}

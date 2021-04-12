@@ -1,42 +1,6 @@
 extend layout 
 block content
-            input#checkbox(type='checkbox')
-            header.header
-                h2.uname
-                  | STAY CLEAN
-                  label(for='checkbox')
-                    i#navbtn.fa.fa-bars(aria-hidden='true')
-                // User icon
-                i.fa.fa-user(aria-hidden='true')
-            .body
-                nav.sidebar
-                  .user-p
-                    img(src='' alt='')
-                  ul
-                    li
-                      a(href="/")
-                        i.fa.fa-desktop(aria-hidden='true')
-                        span  Dashboard
-                    li
-                      a(href="/register")
-                        i.fa.fa-user(aria-hidden='true')
-                        span  Register Front Desk
-                    li
-                      a(href="/employee")
-                        i.fa.fa-users(aria-hidden='true')
-                        span Register Employees
-                    li
-                      a(href="/employee/list")
-                        i.fa.fa-pencil-square(aria-hidden='true')
-                        span  Update Employee
-                    li
-                      a(href="/order")
-                        i.fa.fa-cog(aria-hidden='true')
-                        span  Orders
-                    li
-                      a(href="/")
-                        i.fa.fa-power-off(aria-hidden='true')
-                        span  Logout
+            
             form(method="POST"  action='/employee/createEmployee' enctype="multipart/form-data")
                       div.row.g-3
                           div.col-md-6

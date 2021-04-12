@@ -3,24 +3,33 @@ const mongoose = require('mongoose');
 
 //create a schema for the data you need to save
 const orderSchema = new mongoose.Schema({
-  firstname: {
-    type: String,
-  },
-  lastname: {
+  username: {
     type: String,
   },
   nin: {
     type: String,
-    unique: true,
   },
-  gender: String,
-  // pastincidence:
-  //   {
-  //     type: String,
-  //   },
-  //
-  // imageupload: String,
-  // role: String,
+  contact: {
+    type: String,
+  },
+  location: {
+    type: String,
+  },
+  service: {
+    type: String,
+  },
+  request: {
+    type: String,
+  },
+  time: {
+    type: String,
+  },
+  conductors: {
+    type: String,
+  },
+  servicefee: {
+    type: String,
+  },
 });
 
 //export the mongoose model

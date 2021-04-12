@@ -10,5 +10,14 @@ const Order = require('../models/Order');
 router.get('/', (req, res) => {
   res.render('order', { title: 'Orders' });
 });
+
+router.post('/order', async (req, res) => {
+  try {
+    res.send('/');
+  } catch (err) {
+    console.log(err);
+    res.status(404).send('Sorry! Something went wrong.');
+  }
+});
 //Importing routes into our index.js/server.js file
 module.exports = router;

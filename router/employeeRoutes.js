@@ -20,10 +20,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 // save data from the createEmployee pug file
-router.post(
-  '/createEmployee',
-  upload.single('imageupload'),
-  async (req, res) => {
+router.post('/createEmployee',upload.single('imageupload'),async (req, res) => {
     try {
       const employee = new Employee(req.body);
       // employee.imageupload = req.file.path;

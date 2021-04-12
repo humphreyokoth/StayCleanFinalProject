@@ -1,0 +1,71 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Orders
+  link(rel='stylesheet' href='/css/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/css/login.css')
+nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand(href='/') Stay Clean
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/') Home
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') About US
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Services
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/order') Contact Us
+      form.d-flex
+        a(href='/login')
+          button.btn.btn-outline-success(type='submit') LOGIN
+.card
+  .card-header
+    h4 Make an Order
+  .card-body
+    form.row.g-3.orderform(method='POST' action='/router/orderRoutes.js')
+      .col-md-6
+        label.form-label(for='name') Name
+        input#inputusername.form-control(type='name' placeholder='user name' name='username')
+      .col-md-6
+        label.form-label(for='nin') NIN
+        input#inputnin.form-control(type='text' placeholder='national id' name='nin')
+      .col-md-6
+        label.form-label(for='contact') Contact
+        input#inputAddress.form-control(type='text' placeholder='+256-XXX-XXXXX' name='contact')
+      .col-md-6
+        label.form-label(for='location') Location
+        input#inputAddress2.form-control(type='text' placeholder='location' name='location')
+      .col-md-6
+        label.form-label(for='service') Service
+        select#inputState.form-select
+          option(selected='') Choose...
+          option Garbage Collection
+          option Waste Disposal
+      .col-md-6
+        label.form-label(for='inputrequests') Request Type
+        select#inputrequests.form-select(name='request')
+          option(selected='') Choose...
+          option One Time
+          option Subscription
+      .col-md-6
+        label.form-label(for='location') Request Time
+        input#inputAddress2.form-control(type='time' placeholder='--:--' name='location')
+      .col-md-6
+        label.form-label(for='conductors') Conductors
+        input#conductors.form-control(type='text' placeholder='conductors needed' name='conductors')
+      .col-md-12
+        label.form-label(for='servicefee') Service Fee
+        input#servicefee.form-control(type='text' placeholder='servicefee' name='servicefee')
+      .col-6
+        button.btn.btn-primary(type='submit') Back
+      .col-6
+        button.btn.btn-primary.btn2(type='submit') Submit
+script(src='css/js/bootstrap.min.js')
+script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js')

@@ -8,22 +8,22 @@ head
   link(rel='stylesheet' href='css/css/style.css')
 nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
   .container-fluid
-    a.navbar-brand(href='#') Stay Clean
+    a.navbar-brand(href='/') Stay Clean
     button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.ms-auto.mb-2.mb-lg-0
         li.nav-item
-          a.nav-link.active(aria-current='page' href='#') Home
+          a.nav-link.active(aria-current='page' href='/') Home
         li.nav-item
           a.nav-link.active(aria-current='page' href='#') About US
         li.nav-item
           a.nav-link.active(aria-current='page' href='#') Services
         li.nav-item
-          a.nav-link.active(aria-current='page' href='#') Contact Us
+          a.nav-link.active(aria-current='page' href='/order') Contact Us
       form.d-flex
-        a(href='/login')
-          button.btn.btn-outline-success(type='submit') LOGIN
+        a(class="btn.btn-outline-success login-link" href='/login') LOGIN
+         
 header
   .container
     .banner-text

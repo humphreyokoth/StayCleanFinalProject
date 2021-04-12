@@ -4,7 +4,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const registrationSchema = new mongoose.Schema({
   firstname: {
     type: String,
-    // required: 'Please Enter first name'
+    
   },
   lastname: {String,
   },
@@ -12,12 +12,14 @@ const registrationSchema = new mongoose.Schema({
   username: {
     type: String,
     unique: true,
-    // required: 'Please Enter User name'
+    
   },
-  // password:{
-  //     type: String,
-  // }
-
+  password:{
+      type: String,
+  },
+  reEnterpassword:{
+    type:String,
+  }
 });
 
 registrationSchema.plugin(passportLocalMongoose);

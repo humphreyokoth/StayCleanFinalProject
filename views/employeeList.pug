@@ -1,45 +1,62 @@
-extends layout
-block content
-    header.card-header
-        h4.card-title Welcome 
-    div.form-row
-        div.col.form-group
-            form(method="post" action='/logout') 
-                button.btn.btn-dark.btn-block.logout(type="submit") Log out
-        div.col.form-group
-            a(href='/employee/createEmployee')  Add New Employee
-            
-        div.pull-right
-        a(href='/order')  View Order List        
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Login
+  link(rel='stylesheet' href='/css/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/css/employeeList.css')
+nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand(href='/') Stay Clean
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/') Home
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/employee/createEmployee') Add New Employee
+      form.d-flex(method='POST' action='/logout')
+        a(href='')
+          button.btn.btn-outline-success(type='submit')
+            | LOG OUT
+.card
+  .card-header
+    h4 Employee List
+  .row
+    .col-md-4
+      form.d-flex
+        input.form-control.me-4(type='search' placeholder='Search' aria-label='Search')
+        button.btn.btn-outline-success(type='submit') Search
+  .card-body
     table.table
-        thead.thead-dark
-            tr
-                th Full Name 
-                th NIN
-                th Gender
-                th D.O.B
-                th Past incidences
-                th Role
-                th Update Employee
-                th Delete Employee
-        tbody
-            if users.length
-            each user in users
+        thead.table-responsive.table-dark
+            th Full Name 
+            th NIN
+            th Gender
+            th D.O.B
+            th Past incidences
+            th Role
+            th Update Employee
+            th Delete Employee
+        tbody 
+            if users.length 
+            each user in users 
                 tr
+
                     td #{user.lastname +' '+ user.firstname}
                     td #{user.nin}
                     td #{user.gender}
                     td #{user.DOB}
                     td #{user.pastincidence}
                     td #{user.role}
-                    td 
-                    td 
-                    td 
                     td
-                        a(href='/employee/update/'+user._id) Update 
+                            a(href='/employee/update/'+user._id) Update 
                     td
-                        form(method="post" action='/employee/delete')
-                            input(type="hidden", placeholder="", name="id", value=user._id)
-                            button.btn.btn-dark.btn-block(type="submit") Delete           
-
-                
+                            form(method="post" action='/employee/delete')
+                                            input(type="hidden", placeholder="", name="id", value=user._id)
+                                            button.btn.btn-dark.btn-block(type="submit") Delete        
+script(src='/css/js/bootstrap.min.js')
+script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js')
