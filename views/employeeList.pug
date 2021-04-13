@@ -18,9 +18,7 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
         li.nav-item
           a.nav-link.active(aria-current='page' href='/employee/createEmployee') Add New Employee
       form.d-flex(method='POST' action='/logout')
-        a(href='')
-          button.btn.btn-outline-success(type='submit')
-            | LOG OUT
+        a(class="btn.btn-outline-success login-link" href='/login') LOGOUT         
 .card
   .card-header
     h4 Employee List
@@ -36,7 +34,7 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
             th NIN
             th Gender
             th D.O.B
-            th Past incidences
+            th Past incidents
             th Role
             th Update Employee
             th Delete Employee
@@ -48,9 +46,9 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
                     td #{user.lastname +' '+ user.firstname}
                     td #{user.nin}
                     td #{user.gender}
-                    td #{user.DOB}
-                    td #{user.pastincidence}
-                    td #{user.role}
+                    td #{user.date}
+                    td #{user.role}                      
+                    td #{user.pastincidents}
                     td
                             a(href='/employee/update/'+user._id) Update 
                     td

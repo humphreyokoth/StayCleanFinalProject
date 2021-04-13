@@ -5,7 +5,7 @@ const Employee = require('../models/Employee');
 
 //get and show the createEmployee.pug file
 router.get('/createEmployee', (req, res) => {
-  res.render('dashboard', { title: 'Add Employee' });
+  res.render('createEmployee', { title: 'Add Employee' });
 });
 
 // image upload

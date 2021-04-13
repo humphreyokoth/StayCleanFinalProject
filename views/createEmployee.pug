@@ -1,47 +1,74 @@
-extends layout
-block content
-    header.card-header
-        h4.card-title Add Employee (Driver or Conductor) 
-    form(method="POST"  action='/employee/createEmployee' enctype="multipart/form-data")
-        div.row.g-3
-            div.col-md-6
-                label First name 
-                input.form-control(name="firstname")
-            div.col-md-6
-                label Last name
-                input.form-control(name="lastname")            
-        div.row.g-3 
-            div.col-md-4
-                label NIN
-                input.form-control(name="nin")
-            div.col-md-4
-                label Username
-                input.form-control(name="username")                                     
-            div.col-md-4
-                label Gender 
-                select.form-control(name="gender")
-                    option(value="option")  Select 
-                    option(value="driver")  Male
-                    option(value="conductor") Female
-            div.col-md-4
-                label Date of Birth 
-                input(type='date' name='date')  
-            div.col-md-4
-                label Role 
-                select.form-control(name="role")
-                    option(value="option")  Select 
-                    option(value="driver")  Driver
-                    option(value="conductor") Conductor
-            div.col-md-4
-                label Past Incidents 
-                select.form-control(name="pastincidents")
-                    option(value="option")  Select 
-                    option(value="accidents")  Accidents  
-                    option(value="figts")  Fights
-                    option(value="thefts") Thefts    
-            div.form-row
-            div.col.form-group
-                button.btn.btn-primary.btn-block Register Employee
-        div.form-row
-            div.pull-right
-                a(class='button btn-button' href='/employee/employeeList') Employee List
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Create Employee
+  link(rel='stylesheet' href='/css/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/css/login.css')
+nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand(href='/') Stay Clean
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/') Home
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') About US
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Services
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Contact Us
+      form.d-flex(method='POST' action='/logout')
+        a(class="btn.btn-outline-success login-link" href='/login') LOGOUT         
+.card
+  .card-header
+    h4 Add Employee (Driver/Conductor)
+  .card-body
+    form.row.g-3.orderform(method='POST' action='/employee/createEmployee' enctype="multipart/form-data")
+      .col-md-6
+        label.form-label(for='name') First name
+        input#inputfirstname.form-control(type='name' placeholder='first name' name='firstname')
+      .col-md-6
+        label.form-label(for='name') Last name
+        input#inputlastname.form-control(type='name' placeholder='last name' name='lastname')
+      .col-md-6
+        label.form-label(for='nin') NIN
+        input#inputnin.form-control(type='text' placeholder='national id' name='nin')
+      .col-md-6
+        label.form-label(for='username') User name
+        input#inputusername.form-control(type='text' placeholder='username' name='username')      
+      .col-md-6
+        label.form-label(for='gender') Gender
+        select#inputGender.form-select(name='gender')
+          option(selected='') Choose...
+          option Male
+          option Female
+      .col-md-6
+        label.form-label(for='dob') Date of birth
+        input#inputdate.form-control(type='date' placeholder='date' name='date')
+      .col-md-6
+        label.form-label(for='service') Role
+        select#inputRole.form-select(name='role')
+          option(selected='') Choose...
+          option Driver
+          option Conductor
+      .col-md-12
+                label Past incidents 
+                div
+                    label.form-check.form-check-inline 
+                        span.form-check-label accidents    &nbsp
+                        input.form-check-input(type="checkbox" checked name="pastincidents" value="accidents")
+                    label.form-check.form-check-inline 
+                        span.form-check-label fights   &nbsp
+                        input.form-check-input(type="checkbox" checked name="pastincidents" value="fights")
+                    label.form-check.form-check-inline 
+                        span.form-check-label fuel thefts &nbsp
+                    input.form-check-input(type="checkbox" checked name="pastincidents" value="fuelthefts")
+      .col-12
+        button.btn.btn-primary.btn2(type='submit') Register Employee
+script(src='/css/js/bootstrap.min.js')
+script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js')

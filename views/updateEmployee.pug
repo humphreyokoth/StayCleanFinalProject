@@ -1,51 +1,76 @@
-extends layout
-block content
-    header.card-header
-        h4.card-title Welcome
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Front Desk 
+  link(rel='stylesheet' href='/css/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/css/updateEmployee.css')
+nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand(href='/') Stay Clean
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/') Home
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') About US
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Services
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Contact Us
+      form.d-flex
+        a(class='btn.btn-outline-success' href='/login')
+          button.btn.btn-outline-success(type='submit') LOGIN   
+.card
+  .card-header
+    h4 Update Employee
     div.form-row
-        div.col.form-group.col-md-12   
-            div.form-row
-                div.col-md-10                   
-    div.form-row
-        img(src='/'+user.imageupload width="150px" height="170px")
-    form(method="post" action="/employee/update?id="+user._id)
-        table.table
-            thead.thead-dark
-                tr
-                    th Firstname
+    img(src='/'+user.imageupload width="100px" height="100px")
+form(method="post"  class="updateform" action="/employee/update?id="+user._id)
+    table.table
+        thead.thead-dark
+            tr
+                th Firstname
+                td 
+                    input.form-control(value = user.firstname name ="firstname")
+            tr
+                th Lastname
+                td 
+                    input.form-control(value = user.lastname name ="lastname")
+            tr
+                th NIN
+                td 
+                    input.form-control(value = user.nin name ="nin")
+            tr
+                th Gender
                     td 
-                        input.form-control(value = user.firstname name ="firstname")
-                tr
-                    th Lastname
-                    td 
-                        input.form-control(value = user.lastname name ="lastname")
-                tr
-                    th NIN
-                    td 
-                        input.form-control(value = user.nin name ="nin")
-                tr
-                    th Gender
-                        td 
-                            label Male&nbsp
-                            input(value= "male" type="radio" checked = user.gender==="male" name="gender") 
-                            label &nbspFemale&nbsp
-                            input(value= "female" type="radio" checked = user.gender==="female" name="gender")
-                //- tr
-                //-     th Past incidence 
-                //-     td 
-                //-         label accidents&nbsp 
-                //-         input(value= "accidents" type="checkbox" checked =user.pastincidence.includes('accidents') name="pastincidence")
-                //-         label &nbspfights&nbsp
-                //-         input(value= "fights" type="checkbox" checked =user.pastincidence.includes('fights') name="pastincidence")
-                //-         label &nbspfuel thefts&nbsp
-                //-         input(value= "fuel thefts" type="checkbox" checked =user.pastincidence.includes('fuel thefts') name="pastincidence")
-                //- tr
-                //- tr
-                //-     th Role
-                //-     td 
-                //-         select.form-control(name="role")  
-                //-             option(value="driver" selected = user.role === "driver") Driver
-                //-             option(value="conductor" selected = user.role === "conductor") Conductor
-                tr
-                    td(colspan=2)
-                        button.btn.btn-dark.btn-block(type="submit") Update
+                        label Male&nbsp
+                        input(value= "male" type="radio" checked = user.gender==="male" name="gender") 
+                        label &nbspFemale&nbsp
+                        input(value= "female" type="radio" checked = user.gender==="female" name="gender")
+            tr
+                th Date of birth
+                td 
+                    input.form-control(value = user.date name ="date")
+            tr
+                th Past incidents 
+                td 
+                    label accidents&nbsp 
+                    input(value= "accidents" type="checkbox" checked =user.pastincidents.includes('accidents') name="pastincidents")
+                    label &nbspfights&nbsp
+                    input(value= "fights" type="checkbox" checked =user.pastincidents.includes('fights') name="pastincidents")
+                    label &nbspfuel thefts&nbsp
+                    input(value= "fuel thefts" type="checkbox" checked =user.pastincidents.includes('fuel thefts') name="pastincidents")
+            tr
+            tr
+                th Role
+                td 
+                    select.form-control(name="role")  
+                        option(value="driver" selected = user.role === "driver") Driver
+                        option(value="conductor" selected = user.role === "conductor") Conductor
+            tr
+                td(colspan=2)
+                    button.btn.btn-dark.btn-block(type="submit") Update

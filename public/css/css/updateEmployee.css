@@ -1,0 +1,41 @@
+ * {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url(/public/images/bgimg.jpg);
+  background-image:no-repeat;
+}
+.updateform{
+    margin: auto;
+    width: 50%;
+    align-content: center;
+    background-color: #ffff;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+ .card {
+  margin-top: 100px;
+  padding: 10px;
+  
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: #000;
+} 
+
+.btn{
+  width: 100%;
+  margin: auto;
+}
+.d-flex{
+    padding: 10px;
+}
+
+.tr{
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+} 
