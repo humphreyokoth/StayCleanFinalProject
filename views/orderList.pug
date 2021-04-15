@@ -16,12 +16,12 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
         li.nav-item
           a.nav-link.active(aria-current='page' href='/') Home
         li.nav-item
-          a.nav-link.active(aria-current='page' href='/employee/createEmployee') Add New Employee
+          a.nav-link.active(aria-current='page' href='/order/order') Orders
       form.d-flex(method='POST' action='/logout')
         a(class="btn.btn-outline-success login-link" href='/login') LOGOUT         
 .card
   .card-header
-    h4 Employee List
+    h4 Order List
   .row
     .col-md-4
       form.d-flex
@@ -30,29 +30,33 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
   .card-body
     table.table
         thead.table-responsive.table-dark
-            th Full Name 
-            th NIN
-            th Gender
-            th D.O.B
-            th Past incidents
-            th Role
-            th Update Employee
-            th Delete Employee
+            th Name 
+            th NIN            
+            th Contact
+            th Location
+            th Service
+            th Request
+            th Request Time
+            th Conductors    
+            th Update Order
+            th Delete Order
         tbody 
             if users.length 
             each user in users 
                 tr
 
-                    td #{user.lastname +' '+ user.firstname}
+                    td #{user.username}
                     td #{user.nin}
-                    td #{user.gender}
-                    td #{user.date}
-                    td #{user.role}                      
-                    td #{user.pastincidents}
+                    td #{user.contact}
+                    td #{user.location}
+                    td #{user.service} 
+                    td #{user.request} 
+                    td #{user.time}  
+                    td #{user.servicefee}                            
                     td
-                            a(href='/employee/update/'+user._id) Update 
+                            a(href='/order/update/'+user._id) Update 
                     td
-                            form(method="post" action='/employee/delete')
+                            form(method="post" action='/order/delete')
                                             input(type="hidden", placeholder="", name="id", value=user._id)
                                             button.btn.btn-dark.btn-block(type="submit") Delete        
 script(src=' https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')

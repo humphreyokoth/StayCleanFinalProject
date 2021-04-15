@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/css/login.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Stay Clean</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Contact Us</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        
+        <a href=""><button class="btn btn-outline-success" type="submit">LOGIN</button>
+          </a>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="card">
+  <div class="card-header">
+  Assign Trucks
+  </div>
+  <div class="card-body">
+    <form class="row g-3 orderform" method="POST" action="/router/orderRoutes.js">
+    
+  <div class="col-md-6">
+    <label for="name" class="form-label">Name of driver</label>
+    <input type="name" class="form-control" id="inputusername" placeholder="Driver name" name="username">
+  </div>
+  <div class="col-md-6">
+    <label for="conductors" class="form-label">Truck conductors</label>
+    <input type="number" class="form-control" id="inputnin" placeholder="Conductors"name="conductors">
+  </div>
+  <!-- Will add it into a check box for two selections -->
+  <div class="col-md-6">
+    <label for="location" class="form-label">Location</label>
+    <input type="text" class="form-control" id="inputlocation" placeholder="location" name="location">
+  </div>
+  <div class="col-md-6">
+    <label for="date" class="form-label">Date</label>
+    <input type="date" class="form-control" id="inputDate" placeholder="date" name="date">
+  </div>
+  <div class="col-md-6">
+    <label for="destination" class="form-label">Next Destination</label>
+    <input type="text" class="form-control" id="inputDestination" placeholder="Next destination" name="destination">
+  </div>
+  <div class="col-md-6">
+    <label for="truckRegnumber" class="form-label">Truck Registration</label>
+    <input type="text" class="form-control" id="inputtruckreg" placeholder="Truck registration number" name="truckRegNumber">
+  </div>
+  <div class="col-md-6">
+    <label for="truckcodenumber" class="form-label">Truck code number</label>
+    <input type="text" class="form-control" id="inputtruckreg" placeholder="Truck registration number" name="truckRegNumber">
+  </div>
+
+  
+<div class="col-md-6">
+    <label for="location" class="form-label">Request Time</label>
+    <input type="time" class="form-control" id="inputAddress2" placeholder="--:--" name="location">
+  </div>
+  
+   
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary">Back</button>
+  </div>
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary btn2">Submit</button>
+  </div>
+ 
+  
+</form>
+    
+  </div>
+</div>   
+
+
+<script src="/public/css/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" ></script>   
+</body>
+</html>

@@ -33,7 +33,7 @@ router.post('/createEmployee',upload.single('imageupload'),async (req, res) => {
   }
 );
 
-// show Employee data from database on the employeelist pug file
+// Show Employee data from database on the employeelist pug file
 router.get('/list', async (req, res) => {
   try {
     // find all the data in the Employee collection
@@ -47,7 +47,7 @@ router.get('/list', async (req, res) => {
   }
 });
 
-// update record based on the _id from the database
+// Update record based on the _id from the database
 
 router.get('/update/:id', async (req, res) => {
   try {
@@ -58,7 +58,7 @@ router.get('/update/:id', async (req, res) => {
   }
 });
 
-// route to save the updated data
+// Route to save the updated data
 router.post('/update', async (req, res) => {
   try {
     await Employee.findOneAndUpdate({ _id: req.query.id }, req.body);
@@ -69,7 +69,7 @@ router.post('/update', async (req, res) => {
   }
 });
 
-//delete and employee record from the database
+//Delete and employee record from the database.
 // add the delete code to the employeelist pug file
 router.post('/delete', async (req, res) => {
   try {
