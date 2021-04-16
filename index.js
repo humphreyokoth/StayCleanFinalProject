@@ -1,6 +1,7 @@
 // Dependencies
 const express = require('express');
 const homeRoutes = require('./router/homeRoutes');
+const dashboardRoute = require('./router/dashboardRoute');
 const employeeRoutes = require('./router/employeeRoutes');
 const loginRoutes = require('./router/loginRoutes');
 const registerRoutes = require('./router/registerRoutes');
@@ -57,6 +58,7 @@ app.use('/public/images', express.static(__dirname + '/public/images'));
 
 // Routes
 app.use('/', homeRoutes);
+app.use('/dashboard',dashboardRoute);
 app.use('/employee', employeeRoutes);
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
