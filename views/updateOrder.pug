@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title Front Desk 
+  title Update order
   link(rel='stylesheet' href='/css/css/bootstrap.min.css')
   link(rel='stylesheet' href='/css/css/updateEmployee.css')
 nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
@@ -16,53 +16,41 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
         li.nav-item
           a.nav-link.active(aria-current='page' href='/') Home        
         li.nav-item
-          a.nav-link.active(aria-current='page' href='/employee/list') Employee List
+          a.nav-link.active(aria-current='page' href='/order/list') Order List
       form.d-flex
         a(class="btn.btn-outline-success login-link" href='/login') LOGOUT           
 .card
   .card-header
-    h4 Update Employee    
-form(method="post"  class="updateform" action="/employee/update?id="+user._id)
+    h4 Update Order   
+form(method="post"  class="updateform" action="/order/update?id="+user._id)
     table.table
         thead.thead-dark
             tr
-                th Firstname
+                th Name
                 td 
                     input.form-control(value = user.firstname name ="firstname")
             tr
-                th Lastname
+                th NIN
                 td 
                     input.form-control(value = user.lastname name ="lastname")
             tr
-                th NIN
+                th contact
                 td 
                     input.form-control(value = user.nin name ="nin")
             tr
-                th Gender
+                th Location
                     td 
                         label Male&nbsp
                         input(value= "male" type="radio" checked = user.gender==="male" name="gender") 
                         label &nbspFemale&nbsp
                         input(value= "female" type="radio" checked = user.gender==="female" name="gender")
             tr
-                th Date of birth
+                th Service
                 td 
-                    input.form-control(value = user.date name ="date")
-            tr
-                th Past incidents 
-                td 
-                    label accidents&nbsp 
-                    input(value= "accidents" type="checkbox" checked =user.pastincidents.includes('accidents') name="pastincidents")
-                    label &nbspfights&nbsp
-                    input(value= "fights" type="checkbox" checked =user.pastincidents.includes('fights') name="pastincidents")
-                    label &nbspfuel thefts&nbsp
-                    input(value= "fuel thefts" type="checkbox" checked =user.pastincidents.includes('fuel thefts') name="pastincidents")
-                    label &nbspnone&nbsp
-                    input(value= "none" type="checkbox" checked =user.pastincidents.includes('none') name="pastincidents")
-                    
+                    input.form-control(value = user.date name ="date")                    
             tr
             tr
-                th Role
+                th Request
                 td 
                     select.form-control(name="role")  
                         option(value="driver" selected = user.role === "driver") Driver

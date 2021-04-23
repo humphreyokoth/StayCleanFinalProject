@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Assign Trucks
+  link(rel='stylesheet' href='css/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/css/assigntruck.css')
+nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    a.navbar-brand(href='/') Stay Clean
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/') Home
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') About US
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Services
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='#') Contact Us
+      form.d-flex
+        a(href='')
+          button.btn.btn-outline-success(type='submit') LOGIN
+.card
+  .card-header
+    h4 Earnings
+  .card-body
+    form.row.g-3.orderform(method='POST' action='/router/earnings.js')
+      .col-md-6
+        label.form-label(for='name') Name of driver
+        input#inputusername.form-control(type='name' placeholder='Driver name' name='username')
+      .col-md-6
+        label.form-label(for='conductors') Truck conductors
+        input#inputnin.form-control(type='number' placeholder='Conductors' name='conductors')      
+      .col-md-6
+        label.form-label(for='location') Location
+        input#inputlocation.form-control(type='text' placeholder='location' name='location')
+      .col-md-6
+        label.form-label(for='date') Date
+        input#inputDate.form-control(type='date' placeholder='date' name='date')
+      .col-md-6
+        label.form-label(for='destination') Next Destination
+        input#inputDestination.form-control(type='text' placeholder='Next destination' name='destination')
+      .col-md-6
+        label.form-label(for='truckRegnumber') Truck Registration
+        input#inputtruckreg.form-control(type='text' placeholder='Truck registration number' name='truckRegNumber')
+      .col-md-6
+        label.form-label(for='truckcodenumber') Truck code number
+        input#inputtruckreg.form-control(type='text' placeholder='Truck registration number' name='truckCodeNumber')
+      .col-md-6
+        label.form-label(for='timerequested') Request Time
+        input#inputAddress2.form-control(type='time' placeholder='--:--' name='timeRequested')      
+      .col-12
+        button.btn.btn-primary.btn2(type='submit') Submit
+script(src=' https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
+script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js')

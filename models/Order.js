@@ -18,6 +18,9 @@ const orderSchema = new mongoose.Schema({
   service: {
     type: String,
   },
+  trucks: {
+    type: String,
+  },
   request: {
     type: String,
   },

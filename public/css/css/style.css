@@ -4,14 +4,19 @@
   font-family: sans-serif;
 }
 
-header {
+body {
   background-image: url(/public/images/back.jpg);
   height: 100vh;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
 }
-
+.navbar {
+  margin-top: 0;
+  width: 100%;
+  /* position: fixed; */
+}
+/* Banner */
 .banner-text {
   position: absolute;
   top: 50%;
@@ -65,44 +70,38 @@ header {
     font-size: 100px;
   }
 }
-.login-link{  
-    text-decoration:none;
-    width: 80px;
-    padding: 10px 10px;
-    border: 1px solid #000;
-    background-color:#0d470d ;
-    border-radius: 5px;
-    text-shadow: #000;
-    text-align: left;
-    color: #ffff;
-  
-  
+.login-link {
+  text-decoration: none;
+  width: 80px;
+  padding: 10px 10px;
+  border: 1px solid #000;
+  background-color: #0d470d;
+  border-radius: 5px;
+  text-shadow: #000;
+  text-align: left;
+  color: #ffff;
 }
-
 
 /* Orders CSS */
 .orderform {
   padding: 10px;
   border: 1px solid #000;
-  width: 500px; 
-  margin: 100px; 
+  width: 500px;
+  margin: 100px;
   place-items: center;
   border-radius: 10px;
-  
 }
-h4{
- text-align: center;
+h4 {
+  text-align: center;
 }
-.btn-primary-btn{
+.btn-primary-btn {
   float: right;
 }
-.btn2{
- float: right;
- width: 100%;
+.btn2 {
+  float: right;
+  width: 100%;
 }
-.btn-block{
+.btn-block {
   width: 100%;
   float: right;
 }
-
-

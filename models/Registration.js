@@ -6,19 +6,17 @@ const registrationSchema = new mongoose.Schema({
     type: String,
     
   },
-  lastname: {String,
+  lastname: {
+    type:String,
   },
 
   username: {
     type: String,
-    unique: true,
+    // unique: true,
     
   },
   password:{
       type: String,
-  },
-  reEnterpassword:{
-    type:String,
   }
 });
 

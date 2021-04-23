@@ -14,38 +14,29 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.ms-auto.mb-2.mb-lg-0
         li.nav-item
-          a.nav-link.active(aria-current='page' href='/') Home
-        li.nav-item
-          a.nav-link.active(aria-current='page' href='#') About US
-        li.nav-item
-          a.nav-link.active(aria-current='page' href='#') Services
-        li.nav-item
-          a.nav-link.active(aria-current='page' href='#') Contact Us
-      form.d-flex
-        a(class='btn.btn-outline-success' href='/login')
-          button.btn.btn-outline-success(type='submit') LOGIN
+          a.nav-link.active(aria-current='page' href='/') Home        
+      form.d-flex        
+        a(class="btn.btn-outline-success login-link" href='/login') LOGIN
 .card
   .card-header
     h4 Register Front Desk Officer
   .card-body
-    form.row.g-3(method='POST' action='/register')
+    form.row.g-3(method='POST' action='/register' name='register' onSubmit='return validation();')
       .col-md-6
         label.form-label(for='firstname') First name
         input#firstname.form-control(type='text' name='firstname')
       .col-md-6
         label.form-label(for='inputLastname') Last name
-        input#inputLastname.form-control(type='text')
+        input#inputLastname.form-control(type='text'  name='lastname')
       .col-12
         label.form-label(for='inputusername') User name
         input#inputusername.form-control(type='text' placeholder='username' name='username')
-      .col-md-6
+      .col-md-12
         label.form-label(for='inputPassword4') Password
-        input#inputPassword4.form-control(type='password' name='password')
-      .col-md-6
-        label.form-label(for='inputPass') Re-Enter Password
-        input#inputPass.form-control(type='password' name='reEnterpassword')
+        input#inputPassword4.form-control(type='password' name='password')      
       .col-12
         button.btn.btn-primary(type='submit') Register
+script(src='/css/js/frontdesk.js')          
 script(src=' https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js')
 script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js')
 script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js')

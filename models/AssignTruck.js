@@ -1,7 +1,7 @@
-//require mongoose
+//Require mongoose.
 const mongoose = require('mongoose');
 
-//create a schema for the data you need to save
+//Create a schema for the data you need to save.
 const assignTruckSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -29,5 +29,5 @@ const assignTruckSchema = new mongoose.Schema({
 
 });
 
-//export the mongoose model
+//Export the mongoose model.
 module.exports = mongoose.model('AssignTruck', assignTruckSchema);

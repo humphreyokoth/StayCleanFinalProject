@@ -11,16 +11,19 @@ const employeeSchema = new mongoose.Schema({
   },
   nin: {
     type: String,
-    unique: true,
+    // unique: true,
   },
   username: {
     type: String,
   },
-  
+  licence: {
+    type: String,
+  },
+
   gender: {
     type: String,
   },
-  date:{
+  date: {
     type: String,
   },
   role: {

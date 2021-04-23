@@ -6,6 +6,17 @@ body{
   background-image: url(/public/images/bgimg.jpg);
   background-image:no-repeat;
 }
+.login-link{  
+    text-decoration: none;
+    width: 80px;
+    padding: 10px 10px;
+    border: 1px solid #000;
+    background-color:#0d470d ;
+    border-radius: 5px;
+    text-shadow: #000;
+    text-align: left;
+    color: #ffff;
+}
 .updateform{
     margin: auto;
     width: 50%;

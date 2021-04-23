@@ -14,16 +14,23 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.ms-auto.mb-2.mb-lg-0
         li.nav-item
-          a.nav-link.active(aria-current='page' href='/') Home
+          a.nav-link.active(aria-current='page' href='/') Home          
         li.nav-item
-          a.nav-link.active(aria-current='page' href='#') About US
-        li.nav-item
-          a.nav-link.active(aria-current='page' href='#') Services
-        li.nav-item
-          a.nav-link.active(aria-current='page' href='/order') Contact Us
+          a.nav-link.active(aria-current='page' href='/order/order') Contact Us
       form.d-flex
         a(href='/login')
           button.btn.btn-outline-success(type='submit') LOGIN
+.modal(tabindex='-1')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        h5.modal-title Modal title
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      .modal-body
+        p Modal body text goes here.
+      .modal-footer
+        button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+        button.btn.btn-primary(type='button') Save changes
 .card
   .card-header
     h4 Make an Order
@@ -47,6 +54,20 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
           option(value='Choose') Choose
           option(value='Garbage Collection') Garbage Collection
           option(value='Waste Disposal') Waste Disposal
+      .col-md-6
+        label.form-label(for='inputtrucknumber') Truck Number
+        select#inputtrucknumber.form-select(name='trucksnumber')        
+          option(value='Choose') Choose
+          if truck.length 
+          each car in truck
+             option(value='trucknumber:${car.inputtrucknumber}') #{car.trucknumber}     
+      .col-md-6
+        label.form-label(for='inputallocate') Truck Code
+        select#inputallocate.form-select(name='trucks')        
+          option(value='Choose') Choose
+          if truck.length 
+          each car in truck
+             option(value='codenumber:${car.inputcodenumber}') #{car.truckcodenumber}             
       .col-md-6
         label.form-label(for='inputrequests') Request Type
         select#inputrequests.form-select(name='request')

@@ -17,6 +17,10 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
           a.nav-link.active(aria-current='page' href='/') Home
         li.nav-item
           a.nav-link.active(aria-current='page' href='/employee/createEmployee') Add New Employee
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/order/list') Orders        
+        li.nav-item
+          a.nav-link.active(aria-current='page' href='/registertruck') AssignTrucks 
       form.d-flex(method='POST' action='/logout')
         a(class="btn.btn-outline-success login-link" href='/login') LOGOUT         
 .card
@@ -32,10 +36,12 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
         thead.table-responsive.table-dark
             th Full Name 
             th NIN
+            th User Name
+            th Licence
             th Gender
             th D.O.B
-            th Past incidents
             th Role
+            th Past incidents
             th Update Employee
             th Delete Employee
         tbody 
@@ -45,6 +51,8 @@ nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
 
                     td #{user.lastname +' '+ user.firstname}
                     td #{user.nin}
+                    td #{user.username}
+                    td #{user.licence}
                     td #{user.gender}
                     td #{user.date}
                     td #{user.role}                      

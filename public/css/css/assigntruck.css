@@ -2,10 +2,7 @@
   margin: 0;
   padding: 0;
 }
-body{
-  background-image: url(/public/images/bgimg.jpg);
-  background-image:no-repeat;
-}
+
 .login-link{  
     text-decoration: none;
     width: 80px;
@@ -17,13 +14,18 @@ body{
     text-align: left;
     color: #ffff;
 }
+body{
+  background-image: url(/public/images/bgimg.jpg);
+  background-image:no-repeat;
+}
+h4{
+ text-align: center;
+}
 .card {
- 
   margin: 80px;
   padding: 10px;
   border: 1px solid #000;
-  width: 95%;
-  margin-top: 100px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   box-shadow: #000;
@@ -31,14 +33,4 @@ body{
 .btn{
   width: 100%;
   margin: auto;
-}
-.d-flex{
-    padding: 10px;
-}
-
-.th{
-    display: table-cell;
-    vertical-align: inherit;
-    font-weight: bold;
-    /* text-align: -internal-center; */
 }
